@@ -6,4 +6,8 @@ class HomeControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should have the right text" do
+    get :index
+    assert_equal("Welcome to Rails Railways", response.body)
+  end
 end
